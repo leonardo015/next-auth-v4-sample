@@ -9,8 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth/drizzle-adapter": "^0.3.6",
+    "@vercel/postgres": "^0.5.1",
+    "drizzle-orm": "^0.29.0",
     "next": "14.0.2",
     "next-auth": "^4.24.5",
+    "nodemailer": "^6.9.7",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -19,6 +23,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "drizzle-kit": "^0.20.4",
     "eslint": "^8",
     "eslint-config-next": "14.0.2",
     "postcss": "^8",

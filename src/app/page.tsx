@@ -1,17 +1,18 @@
 import { getServerSession } from "next-auth";
 import Image from "next/image";
+import { authOptions } from "./api/auth/[...nextauth]/route";
 
 export default async function Home() {
-	const session = await getServerSession();
+	const session = await getServerSession(authOptions);
 	console.log(session);
 
 	return (
 		<>
 			getServerSession Result
-			{session?.user?.name ? (
+			{session?.user?.email ? (
 				<div>
 					<h3>Logged in as</h3>
-					<span>Name: {session?.user?.name}</span>
+					<span>Name: {session?.user?.email}</span>
 					{/* <span>Email: {session?.user?.email}</span>
 					<span>
 						Photo:{" "}
